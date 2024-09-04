@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SpaceShooter" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="compiler_for_arm_nintendo_ds" />
+		<Build>
+			<Script file="lib_finder.script" />
+			<Target title="Debug">
+				<Option output="SpaceShooter.elf" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="compiler_for_arm_nintendo_ds" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -e -f $makefile" />
+					<CompileFile command="$make -e -f $makefile" />
+					<Clean command="$make -e -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -e -q -f $makefile clean" />
+					<SilentBuild command="$make -e -f $makefile &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/patrickapproves" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="compiler_for_arm_nintendo_ds" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Makefile" />
+		<Unit filename="data/bg0.h" />
+		<Unit filename="data/bg0.s" />
+		<Unit filename="data/bg1.h" />
+		<Unit filename="data/bg1.s" />
+		<Unit filename="data/bg2.h" />
+		<Unit filename="data/bg2.s" />
+		<Unit filename="data/bg3.h" />
+		<Unit filename="data/bg3.s" />
+		<Unit filename="data/sprites.h" />
+		<Unit filename="data/sprites.s" />
+		<Unit filename="data/tileset0.h" />
+		<Unit filename="data/tileset0.s" />
+		<Unit filename="header/JogoPrincipal.h" />
+		<Unit filename="header/MenuPrincipal.h" />
+		<Unit filename="source/JogoPrincipal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/MenuPrincipal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
